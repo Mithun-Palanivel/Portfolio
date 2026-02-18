@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(56, 189, 248, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(139, 92, 246, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(34, 197, 94, 0.12),
+      transparent 40%
+    ),
+    #020617;
+
+  color: white;
+  overflow-x: hidden;
+
+  animation: bgMove 20s ease-in-out infinite alternate;
+}
+
+/* Background Animation */
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 0%, 100% 0%, 50% 100%;
+  }
+
+  100% {
+    background-position: 100% 100%, 0% 100%, 50% 0%;
+  }
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(15px);
+
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* ================= CANVAS ================= */
+
+#three-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.3;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+.hero p {
+  margin: 25px 0;
+  color: #cbd5f5;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.secondary {
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+  padding: 120px 80px;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 2.6rem;
+  margin-bottom: 25px;
+}
+
+.about p {
+  color: #cbd5f5;
+  line-height: 1.7;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 60px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 35px;
+  border-radius: 18px;
+
+  background: rgba(15,23,42,0.7);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: 0.4s;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #cbd5f5;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(56,189,248,0.25);
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.6rem;
+  margin-bottom: 40px;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+
+  background: #020617;
+  color: white;
+
+  border: 1px solid #1e293b;
+}
+
+form button {
+  background: #38bdf8;
+  color: #020617;
+
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  nav,
+  section {
+    padding: 20px 30px;
+  }
+
+  .hero {
+    padding: 0 30px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+}
+/* ================= PARTICLES ================= */
+
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.particles::before,
+.particles::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(56, 189, 248, 0.15);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 12s infinite alternate ease-in-out;
+}
+
+.particles::after {
+  background: rgba(139, 92, 246, 0.15);
+  width: 250px;
+  height: 250px;
+  animation-duration: 16s;
+}
+
+/* Floating animation */
+
+@keyframes float {
+  0% {
+    transform: translate(10vw, 10vh);
+  }
+
+  100% {
+    transform: translate(70vw, 70vh);
+  }
+}
+
