@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mithun | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+  <nav>
+    <h2 class="logo">MP.</h2>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <canvas id="three-canvas"></canvas>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>
+        Hi, I'm <span>Mithun </span><br>
+        Frontend Developer
+      </h1>
+      <p>
+        I build beautiful, interactive, and high-performance websites.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn primary">View Work</a>
+        <a href="#contact" class="btn secondary">Hire Me</a>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate web developer with experience in building
+      responsive, animated, and user-focused digital experiences.
+      I specialize in modern JavaScript frameworks and creative UI.
+    </p>
+  </section>
+  <section id="projects" class="projects">
+    <h2>Selected Work</h2>
+        <h3>Portfolio Website</h3>
+        <p>Animated personal website with GSAP.</p>
+        <h3>E-Commerce Platform</h3>
+        <p>Full online store with payment system.</p>
+        <h3>Weather App</h3>
+        <p>Live weather tracking application.</p>
+      
+  </section>
+  <section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <script src="script.js"></script>
+<div class="particles"></div>
+
+
+</body>
+</html>
